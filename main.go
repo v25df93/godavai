@@ -3,30 +3,30 @@ package main
 import (
 	"errors"
 	"fmt"
-	"log"
 )
 
-func enterTheClub(age int) (string, error) {
-	if age >= 18 && age <= 45 {
-		return "Входи.", nil
-	} else if age >= 45 && age < 65 {
-		return "Вам точно понравится?", nil
-	} else if age > 65 {
-		return "Это уже слишком", errors.New("you are too old")
+func prediction(dayofweek string) (string, error) {
+	switch dayofweek {
+	case "пн":
+		return "хорошего начала недели", nil
+	case "вт":
+		return "хорошего вторника", nil
+	case "ср":
+		return "хорошего среды", nil
+	case "чт":
+		return "хорошего четверга", nil
+	case "пт":
+		return "хорошего пятницы", nil
+	case "сб":
+		return "хорошего субботы", nil
+	case "вс":
+		return "хорошего воскресенья", nil
+	default:
+		return "красава", errors.New("invalid dayofweek")
 	}
-
-	return "Нельзя", errors.New("you are too young")
-
 }
 
 func main() {
-	message, err := enterTheClub(12)
-
-	if err != nil {
-		log.Fatal(err)
-		fmt.Println(err)
-		return
-	}
-
-	fmt.Println(message)
+	prediction("пн")
+	fmt.Println(prediction("asdasdasd"))
 }
