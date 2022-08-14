@@ -2,11 +2,14 @@ package main
 
 import "fmt"
 
+var msg string
+
+func init() {
+
+	msg = "cum"
+
+}
+
 func main() {
-	call := func(name string) {
-		fmt.Println("Calling", name)
-	}
-	call("Meet")
-	person := "Chris"
-	call(person)
+	fmt.Println(msg)
 }
