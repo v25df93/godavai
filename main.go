@@ -1,18 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func print() {
-	fmt.Println("helllooo woorlldldddd")
-	fmt.Println(1)
-	fmt.Println(2 * 2)
-}
-func main() {
-	//message := "я есть я"
-	//  --------------------------------------------------------
-
-	var message string // = ("я есть я")
-	message = ("я есть я")
-
+func printMessage(message string) {
 	fmt.Println(message)
+}
+
+func sayhello(name string) string {
+	return "привет, " + name + "!!!"
+}
+
+func main() {
+	message := sayhello("Максим")
+	printMessage(message)
 }
