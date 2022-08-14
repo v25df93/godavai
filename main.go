@@ -15,7 +15,7 @@ func findmin(numbers ...int) int {
 	min := numbers[0]
 
 	for _, i := range numbers {
-		if i < min {
+		if i > min {
 			min = i
 		}
 	}
