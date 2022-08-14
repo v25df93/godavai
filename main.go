@@ -4,17 +4,17 @@ import (
 	"fmt"
 )
 
-func printMessage(message string) {
-	fmt.Println(message)
-}
-
-func sayhello(name string, age int) string {
-	return fmt.Sprintf("Привет, %s! Тебе %d лет!", name, age)
+func enterTheClub(age int) (string, bool) {
+	if age >= 18 {
+		return "Входи.", true
+	} else {
+		return "Тебе нет 18.", false
+	}
 }
 
 func main() {
-	var message string
-	message = sayhello("Максим", 21)
+	message, entered := enterTheClub(18)
+	fmt.Println(message)
+	fmt.Println(entered)
 
-	printMessage(message)
 }
