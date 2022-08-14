@@ -5,20 +5,20 @@ import (
 )
 
 func main() {
-	f.Println(findmin(1, 2, 5, 7, 788, 535, 321, -2, -01, -55, 2527))
+	f.Println(findmax(1, 2, 5, 7, 788, 535, 321, -2, -01, -55, 2527))
 }
 
-func findmin(numbers ...int) int {
+func findmax(numbers ...int) int {
 	if len(numbers) == 0 {
 		return 0
 	}
-	min := numbers[0]
+	max := numbers[0]
 
 	for _, i := range numbers {
-		if i > min {
-			min = i
+		if i > max {
+			max = i
 		}
 	}
 
-	return min
+	return max
 }
