@@ -1,32 +1,24 @@
 package main
 
 import (
-	"errors"
-	"fmt"
+	f "fmt"
 )
 
-func prediction(dayofweek string) (string, error) {
-	switch dayofweek {
-	case "пн":
-		return "хорошего начала недели", nil
-	case "вт":
-		return "хорошего вторника", nil
-	case "ср":
-		return "хорошего среды", nil
-	case "чт":
-		return "хорошего четверга", nil
-	case "пт":
-		return "хорошего пятницы", nil
-	case "сб":
-		return "хорошего субботы", nil
-	case "вс":
-		return "хорошего воскресенья", nil
-	default:
-		return "красава", errors.New("invalid dayofweek")
-	}
+func main() {
+	f.Println(findmin(1, 2, 5, 7, 788, 535, 321, -2, -01, -55, 2527))
 }
 
-func main() {
-	prediction("пн")
-	fmt.Println(prediction("asdasdasd"))
+func findmin(numbers ...int) int {
+	if len(numbers) == 0 {
+		return 0
+	}
+	min := numbers[0]
+
+	for _, i := range numbers {
+		if i < min {
+			min = i
+		}
+	}
+
+	return min
 }
