@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 func main() {
-	amountLeft := rand.Intn(10000)
-	fmt.Println("amountLeft is: ", amountLeft)
-
-	if amountLeft > 5000 {
-		fmt.Println("What should I spend this on?")
-	} else {
-		fmt.Println("Where did all my money go?")
+	i := "davai govno"
+	fmt.Scan(&i)
+	switch i {
+	case "if":
+		fmt.Println("if > else")
+	case "else":
+		fmt.Println("net epta ina4e")
+	default:
+		fmt.Println("GEIII")
 	}
 }
