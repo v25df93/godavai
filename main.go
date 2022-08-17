@@ -1,27 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
-	var publisher, writer, artist, title string
-	var year, pageNumber int32
-	var grade float32
-	title = "Mr. GoToSleep"
-	writer = "Tracey Hatchet"
-	artist = "Jewel Tampson"
-	publisher = "DizzyBooks Publishing Inc."
-	year = 1997
-	pageNumber = 14
-	grade = 6.5
-	fmt.Println(title, "written by", writer, "drawn by", artist, publisher, year, pageNumber, "pages", grade, "grade")
-	fmt.Println()
-	title = "Epic Vol. 1"
-	writer = "Ryan N. Shawn."
-	artist = "Phoebe Paperclips"
-	publisher = "DizzyBooks Publishing Inc."
-	year = 2013
-	pageNumber = 160
-	grade = 9.0
-	fmt.Println(title, "written by", writer, "drawn by", artist, publisher, year, pageNumber, "pages", grade, "grade")
+	amountLeft := rand.Intn(10000)
+	fmt.Println("amountLeft is:", rand.Intn(amountLeft))
 
+	if amountLeft > 5000 {
+		fmt.Println("What should I spend this on?")
+	} else {
+		fmt.Println("Where did all my money go?")
+	}
 }
