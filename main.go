@@ -1,16 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func swap(a int, b int) {
-	a ^= b
-	b ^= a
-	a ^= b
-	fmt.Println(a, b)
+func joinTwoStrings(prefix string, suffix string) string {
+	fmt.Println(prefix, suffix)
+	return prefix + suffix
 }
 
 func main() {
-	a := 10
-	b := 4
-	swap(a, b)
+	joinTwoStrings("vasil'ev", "artem")
 }
