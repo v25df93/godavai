@@ -1,4 +1,17 @@
-package winniepooh
+package woosah
 
-// MyName will be exported because it starts with a capital letter.
-var namexdd = "Pooh"
+// Private visibility
+var test1 = "private variable"
+
+// Public visibility
+var Test2 = "public variable"
+
+// Private visiblity
+func greet() string {
+	return "hello"
+}
+
+// Public visibility
+func Greet2() string {
+	return "hello world"
+}
